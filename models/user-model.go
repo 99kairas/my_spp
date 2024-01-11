@@ -11,4 +11,5 @@ type User struct {
 	Email    string    `json:"email" form:"email"`
 	Password string    `json:"password" form:"password"`
 	OTP      string    `json:"otp" form:"otp"`
+	Status   string    `gorm:"type:enum('verified', 'unverified');default:unverified" json:"status" form:"status"`
 }
